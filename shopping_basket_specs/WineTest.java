@@ -47,6 +47,11 @@ public class WineTest {
     assertEquals(false, wine.getBuyOneGetOneFree());
   }
 
+  @Test
+  public void checkHasType() {
+    assertEquals("Red", wine.getType());
+  }
+
   @Test 
   public void checkExpirationDiscountApplies() {
     assertEquals(false, wine.checkExpirationDiscountApplies());
