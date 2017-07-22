@@ -35,4 +35,10 @@ public class WineTest {
   public void checkHasAgeRestriction() {
     assertEquals(18, wine.getAgeRestriction());
   }
+
+  //The number of days on this test has to be updated when the test is run in the future, because this test is based on the current date.
+  @Test
+  public void checkDaysLeftToExpirationDate() {
+    assertEquals(1237, wine.getDaysLeftForExpirationDate());
+  }
 }

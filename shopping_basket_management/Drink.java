@@ -44,7 +44,7 @@ public abstract class Drink implements Sellable {
 
   public int getDaysLeftForExpirationDate() {
     LocalDate today = LocalDate.now();
-    int days = Days.daysBetween(new LocalDate(expirationDate), new LocalDate(today)).getDays(); 
+    int days = Days.daysBetween(new LocalDate(today), new LocalDate(expirationDate)).getDays(); 
     return days;
   }
 

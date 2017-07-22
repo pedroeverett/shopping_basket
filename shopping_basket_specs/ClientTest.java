@@ -16,6 +16,7 @@ public class ClientTest {
     assertEquals("Pedro", client.getName());
   }
 
+  //The number of years on this test probably has to be updated when the test is run in the future, because this test is based on the current date.
   @Test
   public void checkHasAge() {
     assertEquals(40, client.getAge());
