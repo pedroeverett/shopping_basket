@@ -6,11 +6,13 @@ import org.joda.time.Years;
 public class Client {
 
   protected String name;
-  public LocalDate dateOfBirth;
+  protected LocalDate dateOfBirth;
+  protected String loyaltyCard;
 
-  public Client(String name, String dateOfBirth) {
+  public Client(String name, String dateOfBirth, String loyaltyCard) {
     this.name = name;
     this.dateOfBirth = LocalDate.parse(dateOfBirth);
+    this.loyaltyCard = loyaltyCard;
   }
 
   public String getName() {
@@ -21,5 +23,12 @@ public class Client {
     LocalDate today = LocalDate.now();
     int years = Years.yearsBetween(new LocalDate(dateOfBirth), new LocalDate(today)).getYears(); 
     return years;
+  }
+
+  public boolean checkLoyaltyCard() {
+    if (loyaltyCard == "yes") {
+      return true;
+    }
+    return false;
   }
 }
