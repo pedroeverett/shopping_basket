@@ -12,7 +12,12 @@ public class WineTest {
   }
 
   @Test
-  public void checkWineName() {
+  public void checkHasName() {
     assertEquals("Borba", wine.getName());
+  }
+
+  @Test
+  public void checkHasBrand() {
+    assertEquals("Adega Borba", wine.getBrand());
   }
 }
