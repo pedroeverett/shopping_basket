@@ -9,7 +9,7 @@ public class Milk extends FreshFood {
     this.type = type;
   }
 
-  public String gettype() {
+  public String getType() {
     return type;
   }
 
