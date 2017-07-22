@@ -16,4 +16,10 @@ public class Client {
   public String getName() {
     return name;
   }
+
+  public int getAge() {
+    LocalDate today = LocalDate.now();
+    int years = Years.yearsBetween(new LocalDate(dateOfBirth), new LocalDate(today)).getYears(); 
+    return years;
+  }
 }

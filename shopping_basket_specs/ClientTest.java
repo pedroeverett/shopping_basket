@@ -15,4 +15,9 @@ public class ClientTest {
   public void checkHasName() {
     assertEquals("Pedro", client.getName());
   }
+
+  @Test
+  public void checkHasAge() {
+    assertEquals(40, client.getAge());
+  }
 }
