@@ -20,4 +20,9 @@ public class WineTest {
   public void checkHasBrand() {
     assertEquals("Adega Borba", wine.getBrand());
   }
+
+  @Test
+  public void checkHasPrice() {
+    assertEquals(7.00, wine.getPrice(), 0.01);
+  }
 }
