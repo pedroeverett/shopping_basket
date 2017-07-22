@@ -30,4 +30,9 @@ public class WineTest {
   public void checkHasBarCode() {
     assertEquals(320321, wine.getBarCode());
   }
+
+  @Test
+  public void checkHasAgeRestriction() {
+    assertEquals(18, wine.getAgeRestriction());
+  }
 }
