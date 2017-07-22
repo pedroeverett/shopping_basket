@@ -2,58 +2,58 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import shopping_basket_management.*;
 
-public class YogurtTest {
+public class CookieTest {
 
-  Yogurt yogurt;
+  Cookie cookie;
 
   @Before
   public void before() {
-    yogurt = new Yogurt("Red Fruits", "Danone", 1.70, 135682, 0, "2017-08-10", false, "Black Berry");
+    cookie = new Cookie("Double Chocolate", "Lovemore", 0.90, 789334, 0, "2017-08-15", false, "Chocolate");
   }
 
   @Test
   public void checkHasName() {
-    assertEquals("Red Fruits", yogurt.getName());
+    assertEquals("Double Chocolate", cookie.getName());
   }
 
   @Test
   public void checkHasBrand() {
-    assertEquals("Danone", yogurt.getBrand());
+    assertEquals("Lovemore", cookie.getBrand());
   }
 
   @Test
   public void checkHasPrice() {
-    assertEquals(1.70, yogurt.getPrice(), 0.01);
+    assertEquals(0.90, cookie.getPrice(), 0.01);
   }
 
   @Test
   public void checkHasBarCode() {
-    assertEquals(135682, yogurt.getBarCode());
+    assertEquals(789334, cookie.getBarCode());
   }
 
   @Test
   public void checkHasAgeRestriction() {
-    assertEquals(0, yogurt.getAgeRestriction());
+    assertEquals(0, cookie.getAgeRestriction());
   }
 
   //The number of days on this test has to be updated when the test is run in the future, because this test is based on the current date.
   @Test
   public void checkDaysLeftToExpirationDate() {
-    assertEquals(19, yogurt.getDaysLeftForExpirationDate());
+    assertEquals(24, cookie.getDaysLeftForExpirationDate());
   }
 
   @Test
   public void checkBuyOneGetOneFreeApplies() {
-    assertEquals(false, yogurt.getBuyOneGetOneFree());
+    assertEquals(false, cookie.getBuyOneGetOneFree());
   }
 
   @Test
   public void checkHasFlavour() {
-    assertEquals("Black Berry", yogurt.getFlavour());
+    assertEquals("Chocolate", cookie.getFlavour());
   }
 
   @Test 
   public void checkExpirationDiscountApplies() {
-    assertEquals(false, yogurt.checkExpirationDiscountApplies());
+    assertEquals(true, cookie.checkExpirationDiscountApplies());
   }
 }
