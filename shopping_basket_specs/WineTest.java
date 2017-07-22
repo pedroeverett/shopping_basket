@@ -25,4 +25,9 @@ public class WineTest {
   public void checkHasPrice() {
     assertEquals(7.00, wine.getPrice(), 0.01);
   }
+
+  @Test
+  public void checkHasBarCode() {
+    assertEquals(320321, wine.getBarCode());
+  }
 }

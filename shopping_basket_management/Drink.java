@@ -34,7 +34,7 @@ public abstract class Drink implements Sellable {
     return price;
   }
 
-  public int getBarcode() {
+  public int getBarCode() {
     return barCode;
   }
 
