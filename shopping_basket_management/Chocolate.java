@@ -9,7 +9,7 @@ public class Chocolate extends Sweet {
     this.type = type;
   }
 
-  public String gettype() {
+  public String getType() {
     return type;
   }
 
