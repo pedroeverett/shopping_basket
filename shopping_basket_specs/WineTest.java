@@ -41,4 +41,9 @@ public class WineTest {
   public void checkDaysLeftToExpirationDate() {
     assertEquals(1237, wine.getDaysLeftForExpirationDate());
   }
+
+  @Test
+  public void checkBuyOneGetOneFreeApplies() {
+    assertEquals(false, wine.getBuyOneGetOneFree());
+  }
 }
