@@ -8,7 +8,7 @@ public class ClientTest {
 
   @Before
   public void before() {
-    client = new Client("Pedro", "1977-05-02", "yes");
+    client = new Client("Pedro", "1977-05-02", true);
   }
 
   @Test
@@ -23,6 +23,6 @@ public class ClientTest {
 
   @Test
   public void checkHasLoyaltyCard() {
-    assertEquals(true, client.checkLoyaltyCard());
+    assertEquals(true, client.getLoyaltyCard());
   }
 }

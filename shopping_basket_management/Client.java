@@ -7,9 +7,9 @@ public class Client {
 
   protected String name;
   protected LocalDate dateOfBirth;
-  protected String loyaltyCard;
+  protected boolean loyaltyCard;
 
-  public Client(String name, String dateOfBirth, String loyaltyCard) {
+  public Client(String name, String dateOfBirth, boolean loyaltyCard) {
     this.name = name;
     this.dateOfBirth = LocalDate.parse(dateOfBirth);
     this.loyaltyCard = loyaltyCard;
@@ -25,10 +25,7 @@ public class Client {
     return years;
   }
 
-  public boolean checkLoyaltyCard() {
-    if (loyaltyCard == "yes") {
-      return true;
-    }
-    return false;
+  public boolean getLoyaltyCard() {
+    return loyaltyCard;
   }
 }
