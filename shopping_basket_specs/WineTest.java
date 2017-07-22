@@ -46,4 +46,9 @@ public class WineTest {
   public void checkBuyOneGetOneFreeApplies() {
     assertEquals(false, wine.getBuyOneGetOneFree());
   }
+
+  @Test 
+  public void checkExpirationDiscountApplies() {
+    assertEquals(false, wine.checkExpirationDiscountApplies());
+  }
 }

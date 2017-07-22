@@ -52,5 +52,12 @@ public abstract class Drink implements Sellable {
     return buyOneGetOneFree;
   }
 
+  public boolean checkExpirationDiscountApplies() {
+    if (getDaysLeftForExpirationDate() <= 30) {
+      return true;
+    }
+    return false;
+  }
+
 
 }
