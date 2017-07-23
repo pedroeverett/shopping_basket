@@ -45,4 +45,11 @@ public class Basket {
   public void addClient(Client newClient) {
     client[0] = newClient; 
   }
+
+  public boolean clientCanBuyProduct(Client newClient, Sellable newProduct) {
+    if (newClient.getAge() >= newProduct.getAgeRestriction()) {
+      return true;
+    }
+    return false;
+  }
 }

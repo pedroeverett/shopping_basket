@@ -50,4 +50,9 @@ public class BasketTest {
     basket.addClient(client);
     assertEquals(1, basket.clientCount());
   }
+
+  @Test
+  public void checkClientCanBuyProduct() {
+    assertEquals(true, basket.clientCanBuyProduct(client, wine));
+  }
 }
