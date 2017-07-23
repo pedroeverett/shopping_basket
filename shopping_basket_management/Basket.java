@@ -29,4 +29,20 @@ public class Basket {
     int numberOfProducts = productlist.size();
     return numberOfProducts;
   }
+
+  public int clientCount() {
+    int numberOfClients = 0;
+
+    for (Client clients : client) {
+      if (clients != null) {
+        numberOfClients++;
+      }
+    }
+
+    return numberOfClients;
+  }
+
+  public void addClient(Client newClient) {
+    client[0] = newClient; 
+  }
 }

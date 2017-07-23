@@ -39,4 +39,15 @@ public class BasketTest {
   public void checkBasketStartEmpty() {
     assertEquals(0, basket.getNumberOfProducts());
   }
+
+  @Test
+  public void checkBasketStartWithNoClient() {
+    assertEquals(0, basket.clientCount());
+  }
+
+  @Test
+  public void checkCanAddClient() {
+    basket.addClient(client);
+    assertEquals(1, basket.clientCount());
+  }
 }
