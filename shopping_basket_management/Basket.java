@@ -61,24 +61,34 @@ public class Basket {
     return newProduct.checkExpirationDiscountApplies();
   }
 
-  // public void addProduct(Sellable newProduct) {
-  //   if (clientCanBuyProduct(newProduct) == false) {
-  //     return;
-  //   }
-  //   if (producHasBuyOneGetOneFree(newProduct) == true) {
+  public void addProduct(Sellable newProduct) {
+    if (clientCanBuyProduct(newProduct) == false) {
+      return;
+    }
+    if (checkProductExpirationDiscountApplies(newProduct) == true) {
+      newProduct.changePriceForExpirationDateDiscount();
+      if (producHasBuyOneGetOneFree(newProduct) == true) {
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+        newProduct.changePriceForBuyOneGetOneFree();
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+      } else {
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+      }
+    } else {
+      if (producHasBuyOneGetOneFree(newProduct) == true) {
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+        newProduct.changePriceForBuyOneGetOneFree();
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+      } else {
+        productList.add(newProduct);
+        total += newProduct.getPrice();
+      }
+    }
+  }
 
-  //   }
-  // }
-  
-  // public void addProduct(Sellable newProduct) {
-  //   if (clientCanBuyProduct(newProduct) == false) {
-  //     return;
-  //   }
-  //   if (checkProductExpirationDiscountApplies(newProduct) == true) {
-  //     newProduct.changePriceForExpirationDateDiscount();
-  //     productList.add(newProduct);
-  //   } else {
-  //   productList.add(newProduct);
-  // }
-  // }
 }

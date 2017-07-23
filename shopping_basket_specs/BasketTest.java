@@ -67,19 +67,13 @@ public class BasketTest {
     assertEquals(true, basket.checkProductExpirationDiscountApplies(cookie));
   }
 
-  // @Test
-  // public void checkCanAddProduct() {
-  //   basket.addClient(client);
-  //   basket.addProduct(juice);
-  //   assertEquals(2, basket.getNumberOfProducts());
-  //   assertEquals(0.90, basket.getTotal(), 0.01);
-  // }
+  @Test
+  public void checkCanAddProduct() {
+    basket.addClient(client);
+    basket.addProduct(juice);
+    basket.addProduct(cookie);
+    assertEquals(3, basket.getNumberOfProducts());
+    assertEquals(2.70, basket.getTotal(), 0.01);
+  }
 
-  // @Test
-  // public void checkCanAddProduct() {
-  //   basket.addClient(client);
-  //   basket.addProduct(cookie);
-  //   assertEquals(1, basket.getNumberOfProducts());
-  //   assertEquals(0.70, basket.getTotal(), 0.01);
-  // }
 }
