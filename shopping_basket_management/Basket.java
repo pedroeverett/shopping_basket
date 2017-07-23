@@ -22,15 +22,21 @@ public class Basket {
   }
 
   public double getTotal() {
-    if (total <= 20.00) {
-    return total;     
+    if (total == 0.00) {
+      return total;
     }else{
-      total = total - (total * 0.10);
-      if (clientArray[0].getLoyaltyCard() == true) {
-        total = total - (total * 0.02);
+      if (total <= 20.00 && total != 0.00) {
+        double shippingExpenses = 3.50;
+        total += shippingExpenses;
+        return total;     
+      }else{
+        total = total - (total * 0.10);
+        if (clientArray[0].getLoyaltyCard() == true) {
+          total = total - (total * 0.02);
+          return total;
+        }
         return total;
       }
-      return total;
     }
   }
 

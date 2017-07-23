@@ -73,7 +73,7 @@ public class BasketTest {
     basket.addProduct(juice);
     basket.addProduct(cookie);
     assertEquals(3, basket.getNumberOfProducts());
-    assertEquals(2.70, basket.getTotal(), 0.01);
+    assertEquals(6.20, basket.getTotal(), 0.01);
   }
 
   @Test
