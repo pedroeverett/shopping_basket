@@ -20,4 +20,8 @@ public class Basket {
   public int getNumber() {
     return number;
   }
+
+  public double getTotal() {
+    return total;
+  }
 }

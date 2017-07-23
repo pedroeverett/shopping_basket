@@ -15,7 +15,7 @@ public class BasketTest {
 
   @Before
   public void before() {
-    basket = new Basket(1, 0);
+    basket = new Basket(1, 0.00);
     client = new Client("Pedro", "1977-05-02", true);
     chocolate = new Chocolate("Black Chocolate", "Cadbury", 1.10, 890123, 0, "2017-09-10", false, "Black");
     cookie = new Cookie("Double Chocolate", "Lovemore", 0.90, 789334, 0, "2017-08-15", false, "Chocolate");
@@ -28,5 +28,10 @@ public class BasketTest {
   @Test
   public void checkHasNumber() {
     assertEquals(1, basket.getNumber());
+  }
+
+  @Test
+  public void checkHasTotal() {
+    assertEquals(0.00, basket.getTotal(), 0.01);
   }
 }
