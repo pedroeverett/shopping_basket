@@ -17,7 +17,7 @@ public class BasketTest {
   public void before() {
     basket = new Basket(1, 0.00);
     client = new Client("Pedro", "1977-05-02", true);
-    chocolate = new Chocolate("Black Chocolate", "Cadbury", 1.10, 890123, 0, "2017-09-10", false, "Black");
+    chocolate = new Chocolate("Black Chocolate Box", "Cadbury", 13.00, 890123, 0, "2017-09-10", false, "Black");
     cookie = new Cookie("Double Chocolate", "Lovemore", 1.00, 789334, 0, "2017-08-15", false, "Chocolate");
     juice = new Juice("Orange Wonder", "Compal", 2.00, 532456, 0, "2017-12-10", true, "Orange");
     milk = new Milk("Daily Milk", "Cravendale", 0.85, 600311, 0, "2017-08-05", false, "Whole");
@@ -76,4 +76,13 @@ public class BasketTest {
     assertEquals(2.70, basket.getTotal(), 0.01);
   }
 
+  @Test
+  public void checkDiscountTotalMore20AndLoyaltyCard() {
+    basket.addClient(client);
+    basket.addProduct(juice);
+    basket.addProduct(cookie);
+    basket.addProduct(wine);
+    basket.addProduct(chocolate);
+    assertEquals(20.02, basket.getTotal(), 0.01);
+  }
 }

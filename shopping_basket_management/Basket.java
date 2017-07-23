@@ -22,7 +22,16 @@ public class Basket {
   }
 
   public double getTotal() {
-    return total;
+    if (total <= 20.00) {
+    return total;     
+    }else{
+      total = total - (total * 0.10);
+      if (clientArray[0].getLoyaltyCard() == true) {
+        total = total - (total * 0.02);
+        return total;
+      }
+      return total;
+    }
   }
 
   public int getNumberOfProducts() {
