@@ -12,7 +12,7 @@ checkouk shopping basket.
 Use of system date to calculate client age and days left until product expiration date.
 
 Calculate the total value of the shopping basket. This accounts for:
-shipping expenses,
+shipping expenses if total value is £15 or less,
 product near expiration date has 30% discount,
 buy-one-get-one-free discounts on items,
 10% off on totals greater than £20 (after previous discount is applied),
