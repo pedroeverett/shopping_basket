@@ -16,3 +16,7 @@ product near expiration date has 30% discount,
 buy-one-get-one-free discounts on items,
 10% off on totals greater than £20 (after previous discount is applied),
 2% off on total for customers with loyalty cards (after all other discounts are applied).
+
+All tests passing.
+
+Values for dates tests need to be updated when test are run in the future, because of the use of real dates.
