@@ -34,4 +34,9 @@ public class BasketTest {
   public void checkHasTotal() {
     assertEquals(0.00, basket.getTotal(), 0.01);
   }
+
+  @Test
+  public void checkBasketStartEmpty() {
+    assertEquals(0, basket.getNumberOfProducts());
+  }
 }
