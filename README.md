@@ -3,7 +3,8 @@ Shopping Basket simulation using Java and TDD. Used joda-time for handling dates
 
 User can:
 
-add items to the shopping basket,
+add items to the shopping basket 
+(client may only buy certain products because of age restriction),
 remove items from the shopping basket,
 empty the shopping basket,
 checkouk shopping basket.
