@@ -39,7 +39,7 @@ public class CookieTest {
   //The number of days on this test has to be updated when the test is run in the future, because this test is based on the current date.
   @Test
   public void checkDaysLeftToExpirationDate() {
-    assertEquals(24, cookie.getDaysLeftForExpirationDate());
+    assertEquals(23, cookie.getDaysLeftForExpirationDate());
   }
 
   @Test
