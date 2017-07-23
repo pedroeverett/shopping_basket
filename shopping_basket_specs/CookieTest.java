@@ -8,7 +8,7 @@ public class CookieTest {
 
   @Before
   public void before() {
-    cookie = new Cookie("Double Chocolate", "Lovemore", 0.90, 789334, 0, "2017-08-15", false, "Chocolate");
+    cookie = new Cookie("Double Chocolate", "Lovemore", 1.00, 789334, 0, "2017-08-15", false, "Chocolate");
   }
 
   @Test
@@ -23,7 +23,7 @@ public class CookieTest {
 
   @Test
   public void checkHasPrice() {
-    assertEquals(0.90, cookie.getPrice(), 0.01);
+    assertEquals(1.00, cookie.getPrice(), 0.01);
   }
 
   @Test
@@ -55,5 +55,11 @@ public class CookieTest {
   @Test 
   public void checkExpirationDiscountApplies() {
     assertEquals(true, cookie.checkExpirationDiscountApplies());
+  }
+
+  @Test
+  public void checkChangePriceForExpirationDateDiscount() {
+    cookie.changePriceForExpirationDateDiscount();
+    assertEquals(0.70, cookie.getPrice(), 0.01);
   }
 }

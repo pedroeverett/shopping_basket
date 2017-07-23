@@ -7,14 +7,14 @@ public class Basket {
 
   private int number;
   private double total;
-  private Client[] client;
-  private ArrayList<Sellable> productlist;
+  private Client[] clientArray;
+  private ArrayList<Sellable> productList;
 
   public Basket(int number, double total) {
     this.number = number;
     this.total = total;
-    this.client = new Client[1];
-    this.productlist = new ArrayList<Sellable>();
+    this.clientArray = new Client[1];
+    this.productList = new ArrayList<Sellable>();
   }  
 
   public int getNumber() {
@@ -26,14 +26,14 @@ public class Basket {
   }
 
   public int getNumberOfProducts() {
-    int numberOfProducts = productlist.size();
+    int numberOfProducts = productList.size();
     return numberOfProducts;
   }
 
   public int clientCount() {
     int numberOfClients = 0;
 
-    for (Client clients : client) {
+    for (Client clients : clientArray) {
       if (clients != null) {
         numberOfClients++;
       }
@@ -43,13 +43,42 @@ public class Basket {
   }
 
   public void addClient(Client newClient) {
-    client[0] = newClient; 
+    clientArray[0] = newClient; 
   }
 
-  public boolean clientCanBuyProduct(Client newClient, Sellable newProduct) {
-    if (newClient.getAge() >= newProduct.getAgeRestriction()) {
+  public boolean clientCanBuyProduct(Sellable newProduct) {
+    if (clientArray[0].getAge() >= newProduct.getAgeRestriction()) {
       return true;
     }
     return false;
   }
+
+  public boolean producHasBuyOneGetOneFree(Sellable newProduct) {
+    return newProduct.getBuyOneGetOneFree();
+  }
+
+  public boolean checkProductExpirationDiscountApplies(Sellable newProduct) {
+    return newProduct.checkExpirationDiscountApplies();
+  }
+
+  // public void addProduct(Sellable newProduct) {
+  //   if (clientCanBuyProduct(newProduct) == false) {
+  //     return;
+  //   }
+  //   if (producHasBuyOneGetOneFree(newProduct) == true) {
+
+  //   }
+  // }
+  
+  // public void addProduct(Sellable newProduct) {
+  //   if (clientCanBuyProduct(newProduct) == false) {
+  //     return;
+  //   }
+  //   if (checkProductExpirationDiscountApplies(newProduct) == true) {
+  //     newProduct.changePriceForExpirationDateDiscount();
+  //     productList.add(newProduct);
+  //   } else {
+  //   productList.add(newProduct);
+  // }
+  // }
 }

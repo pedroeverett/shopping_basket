@@ -59,5 +59,17 @@ public abstract class FreshFood implements Sellable {
     return false;
   }
 
+  public void changePriceForBuyOneGetOneFree() {
+    if (getBuyOneGetOneFree() == true) {
+      price = 0.00;
+    }
+  }
+
+  public void changePriceForExpirationDateDiscount() {
+    if (checkExpirationDiscountApplies() == true) {
+      price = price - (price * 0.30);
+    }
+  }
+
 
 }
